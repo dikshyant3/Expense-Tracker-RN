@@ -6,6 +6,7 @@ import {sql} from "./config/db.js"
 const app = express()
 
 // middleware
+app.use(rateLimiter)
 app.use(express.json())
 
 dotenv.config()
@@ -117,3 +118,6 @@ app.get("/api/transactions/summary/:userId", async(req,res)=> {
         res.status(500).json({error: "Internal Server Error"});
     }
 })
+
+// Make sure to add transaction summary in the postman collection
+
