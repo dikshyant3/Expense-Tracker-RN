@@ -1,4 +1,0 @@
-
-cd /Users/dikshyant/Documents/Expense-Tracker/mobile
-touch .watchmanconfig
-echo '{}' > .watchmanconfig
